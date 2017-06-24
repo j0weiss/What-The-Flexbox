@@ -64,13 +64,53 @@ section, footer {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+}
+
+.flex-nav li {
+  flex: 3;
+}
+
+.flex-nav .social {
+  flex: 1;
 }
 
 @media all and (max-width:1000px) {
-
+  .flex-nav ul {
+    flex-wrap: wrap;
+  }
+  .flex-nav li {
+    flex: 1 1 50%;
+  }
 }
 
 
 @media all and (max-width:500px) {
-  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-nav { order: 0; }
+  header { order: 1; }
+  .details { order: 2; }
+  .signup { order: 4; }
+  .hero { order: 5; }
+  footer { order: 6; }
+
+  .flex-nav ul {
+    display: none;
+  }
+
+  .flex-nav ul.open {
+    display: flex;
+  }
+
+  .toggleNav {
+    display: block;
+  }
+
+  .flex-nav li {
+    flex-basis: 100%;
+  }
 }

@@ -33,4 +33,13 @@ a {
 }
 
 /* Flexbox Starts Here: */
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+.elements .item {
+  flex: 1 1 calc(33.33333% - 20px);
+  flex-grow: 1;
+}
